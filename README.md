@@ -1,3 +1,24 @@
+# 💰 Angular 14 Expense Tracker
+
+A responsive expense tracker app built using Angular 14. Includes:
+
+- ✅ CRUD operations
+- ✅ Pie/Bar chart toggle
+- ✅ Search filter
+- ✅ Local Storage persistence
+
+## 🔧 Tech Stack
+- Angular 14
+- Chart.js
+- TypeScript
+
+## 🚀 Run Locally
+
+```bash
+npm install
+ng serve
+
+
 # AngularExpenseTracker
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.
