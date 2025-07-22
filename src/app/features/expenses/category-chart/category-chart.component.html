@@ -1,0 +1,12 @@
+<div style="max-width: 400px; margin: auto;">
+  <canvas baseChart
+          [datasets]="chartDatasets"
+          [labels]="pieChartLabels"
+          [options]="chartOptions"
+          [type]="pieChartType">
+  </canvas>
+</div>
+
+<button (click)="toggleChartType()">
+  Switch to {{ pieChartType === 'pie' ? 'Bar' : 'Pie' }} Chart
+</button>

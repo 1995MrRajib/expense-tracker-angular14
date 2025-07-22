@@ -1,0 +1,35 @@
+<div class="summary-card">
+  <h2>Billing Summary</h2>
+  <p><strong>Total Expenses:</strong> ₹{{ totalAmount }}</p>
+  <p><strong>Total Entries:</strong> {{ totalCount }}</p>
+  <p><strong>Average Expense:</strong> ₹{{ averageAmount }}</p>
+</div>
+
+<div class="category-summary">
+  <h3>Category-wise Summary</h3>
+  <ul>
+    <li *ngFor="let category of getCategoryKeys()">
+      {{ category }}: ₹{{ categoryTotals[category] }}
+    </li>
+  </ul>
+</div>
+<app-category-chart [categoryTotals]="categoryTotals"></app-category-chart>
+<div *ngIf="expenses.length === 0">
+  <p>No expenses added yet.</p>
+</div>
+<button type="button" (click)="goToAdd()">Add Expenses</button>
+<input
+  type="text"
+  placeholder="Search by category or notes"
+  [(ngModel)]="searchTerm"
+  (input)="filterExpenses()"
+  class="search-bar"
+/>
+<div *ngFor="let expense of filteredExpenses" class="expense-card">
+  <h3>{{ expense.category }}</h3>
+  <p><strong>Amount:</strong> ₹{{ expense.amount }}</p>
+  <p><strong>Date:</strong> {{ expense.date }}</p>
+  <p *ngIf="expense.notes"><strong>Notes:</strong> {{ expense.notes }}</p>
+  <button (click)="editExpense(expense.id)">Edit</button>
+  <button (click)="deleteExpense(expense.id)">Delete</button>
+</div>

@@ -1,0 +1,22 @@
+<button type="button" (click)="goToList()">View All Expenses</button>
+<div class="expense-form">
+  <form [formGroup]="expenseForm" (ngSubmit)="onSubmit()">
+
+    <label>Category</label>
+    <select formControlName="category">
+      <option value="" disabled>Select a category</option>
+      <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
+    </select>
+
+    <label>Amount</label>
+    <input type="number" formControlName="amount" />
+
+    <label>Date</label>
+    <input type="date" formControlName="date" />
+
+    <label>Notes</label>
+    <textarea formControlName="notes"></textarea>
+
+    <button type="submit" [disabled]="!expenseForm.valid">Add Expense</button>
+  </form>
+</div>

@@ -1,0 +1,17 @@
+<form [formGroup]="expenseForm" (ngSubmit)="onSubmit()">
+  <label>Category</label>
+  <select formControlName="category">
+    <option *ngFor="let c of categories" [value]="c">{{ c }}</option>
+  </select>
+
+  <label>Amount</label>
+  <input type="number" formControlName="amount" />
+
+  <label>Date</label>
+  <input type="date" formControlName="date" />
+
+  <label>Notes</label>
+  <input type="text" formControlName="notes" />
+
+  <button type="submit">Save Changes</button>
+</form>

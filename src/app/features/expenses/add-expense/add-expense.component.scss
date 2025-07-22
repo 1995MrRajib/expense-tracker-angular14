@@ -1,0 +1,30 @@
+.expense-form {
+  max-width: 400px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+
+  label {
+    margin-top: 12px;
+    font-weight: bold;
+  }
+
+  input, select, textarea {
+    padding: 6px;
+    margin-top: 4px;
+  }
+
+  button {
+    margin-top: 20px;
+    padding: 8px;
+    background-color: #007acc;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+  }
+}

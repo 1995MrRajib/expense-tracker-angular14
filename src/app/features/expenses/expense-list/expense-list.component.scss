@@ -1,0 +1,41 @@
+.expense-card {
+  border: 1px solid #ccc;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background-color: #f7f7f7;
+}
+
+button {
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-bar {
+  padding: 8px;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.summary-card {
+  padding: 16px;
+  background: #f1f5f9;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.category-summary {
+  background-color: #fff7ed;
+  padding: 16px;
+  border: 1px solid #ffd89b;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
